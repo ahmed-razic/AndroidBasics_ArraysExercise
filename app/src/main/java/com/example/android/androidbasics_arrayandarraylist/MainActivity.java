@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +25,28 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, String.valueOf(intArray[5]), Toast.LENGTH_SHORT).show();
 
         doArrays();
+
+        doArrayList();
+    }
+
+    private void doArrayList() {
+        ArrayList<String> restaurantsToTry = new ArrayList<String>();
+
+        restaurantsToTry.add("Morning Cafe");
+        restaurantsToTry.add("BBQ Time");
+        restaurantsToTry.add(2, "Fine Eats");
+        restaurantsToTry.add("Sweet pause");
+
+        Log.i("doArrayList()", restaurantsToTry.get(0));
+        Log.i("doArrayList()", restaurantsToTry.get(1));
+        Log.i("doArrayList()", restaurantsToTry.get(2));
+        Log.i("doArrayList()", restaurantsToTry.get(3));
+        Log.i("doArrayList()", String.valueOf(restaurantsToTry.size()));
+        restaurantsToTry.remove("Fine Eats");
+        restaurantsToTry.size();
+        Log.i("doArrayList()", String.valueOf(restaurantsToTry.size()));
+
+
     }
 
     public void doArrays() {
